@@ -2,10 +2,342 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width">
+    <title>Víctor Tébar - Portfolio</title>
+    <link rel="stylesheet" href="./css/fontello/css/fontello.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="./scripts/index.js" defer></script>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <header id="header" class="header">
+        <h1>Víctor Tébar</h1>
+        <div class="socials-div">
+            <a class="clickable-icon icon-linkedin" href="https://www.linkedin.com/in/victor-t-59761a339" target="_blank">
+            </a>
+            <a class="clickable-icon icon-github" href="https://github.com/Sirooy" target="_blank">
+            </a>
+            <a class="clickable-icon icon-mail" href="mailto:victortob8@gmail.com">
+            </a>
+        </div>
+    </header>
+    <main class="main-container">
+        <section class="about-section">
+            <h1 class="section-title">About</h1>
+            <div>
+                <p>Hi, my name is Víctor.</p>
+                <p>I'm a graduate in Multimedia Engineering with a strong passion for game development. 
+                   Since I started learning programming, I've always been curious about how games work under 
+                   the hood. That's why most of my projects lean toward the low-level side, using libraries 
+                   and frameworks instead of game engines, as I believe that a deeper understanding of the 
+                   fundamentals is essential. I'm always looking for new challenges and projects that allow 
+                   me to expand my knowledge and skills.
+                </p>
+            </div>
+        </section>
+        <section class="grid-section">
+            <h1 class="section-title">Projects</h1>
+            <section class="projects-grid" id="projects-grid">
+                <div class="grid-element" href="#project-farming-spirits" onclick="showProjectInformation('project-farming-spirits')">
+                    <div class="grid-element-info">
+                        <span>Farming Spirits</span>
+                        <span>Programmer</span>
+                        <span class="tag-list">
+                            <span class="tag">Assembly</span>
+                            <span class="tag">z80</span>
+                            <span class="tag">Amstrad Cpc</span>
+                            <span class="tag">Team Project</span>
+                        </span>
+                    </div>
+                    <div class="grid-element-thumbnail">
+                        <img src="./assets/img/farming-spirits/thumbnail.png"></img>
+                        <video autoplay muted loop oncontextmenu="return false;">
+                            <source src="./assets/video/farming-spirits-preview.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="grid-element" onclick="showProjectInformation('project-dice-dungeon')">
+                    <div class="grid-element-info">
+                        <span>Dice Dungeon</span>
+                        <span>Solo Developer</span>
+                        <span class="tag-list">
+                            <span class="tag">C#</span>
+                            <span class="tag">MonoGame</span>
+                            <span class="tag">ECS</span>
+                            <span class="tag">Solo Project</span>
+                        </span>
+                    </div>
+                    <div class="grid-element-thumbnail">
+                        <img src="./assets/img/dice-dungeon/thumbnail.png"></img>
+                        <video autoplay muted loop oncontextmenu="return false;">
+                            <source src="./assets/video/dice-dungeon-preview.mp4 " type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="grid-element" onclick="showProjectInformation('project-hell-hunter')">
+                    <div class="grid-element-info">
+                        <span>Hell Hunter</span>
+                        <span>Lead Programmer</span>
+                        <span>Designer</span>
+                        <span class="tag-list">
+                            <span class="tag">C++</span>
+                            <span class="tag">OpenGL</span>
+                            <span class="tag">ECS</span>
+                            <span class="tag">Graphics</span>
+                            <span class="tag">Team Project</span>
+                        </span>
+                    </div>
+                    <div class="grid-element-thumbnail">
+                        <img src="./assets/img/hell-hunter/thumbnail.png"></img>
+                        <video autoplay muted loop oncontextmenu="return false;">
+                            <source src="./assets/video/hell-hunter-preview.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- FARMING SPIRITS INFO -->
+        <section class="projects-section">
+            <input type="checkbox" class="show-project-checkbox" id="project-farming-spirits">
+            <section class="project-info">
+                <h1 class="section-title">Farming Spirits</h1>
+                <div class="project-info-summary">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YbO0qre9yrw?si=oNjIZK57r03sLlef" title="Farming Spirits Gameplay" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div>
+                        <div>
+                            <span>Role:</span>
+                            <span>Programmer</span>
+                        </div>
+                        <div>
+                            <span>Tecnologies:</span>
+                            <span>Assembly Z80, CpcTelera</span>
+                        </div>
+                        <div>
+                            <span>Duration:</span>
+                            <span>1-2 Months</span>
+                        </div>
+                        <div>
+                            <span>Team size:</span>
+                            <span>3</span>
+                        </div>
+                        <div>
+                            <span>Source code:</span>
+                            <span><a href="https://truncadostudios.itch.io/farming-spirits" target="_blank">Itch.io</a></span>
+                        </div>
+                    </div>
+                </div>
+                <span class="tag-list">
+                    <span class="tag">Assembly</span>
+                    <span class="tag">z80</span>
+                    <span class="tag">Amstrad Cpc</span>
+                    <span class="tag">Team Project</span>
+                </span>
+                <div class="line-divider"></div>
+                <h2>What is Farming Spirits?</h2>
+                <p>Farming Spirits is an arcade retro game where the player has to defeat numerous waves of 
+                   enemies using different attacks. The game was made in <span class="highlight">assembly Z80</span> for the Amstrad CPC 464 
+                   using <a href="https://github.com/lronaldo/cpctelera" target="_blank">CPCTelera</a>. It was created as part of a university 
+                   project and was also submitted to the <a href="https://itch.io/jam/cpcretrodev2022" target="_blank">#CPCRetroDev 2022</a> 
+                   contest, where it won <span class="highlight">two awards:</span> third place in the UA Category and Best Novice Game 
+                   from the Ready&Play sponsor.
+                </p>
+                <div class="line-divider"></div>
+                <div class="carousel-container">
+                    <span class="clickable-icon icon-left-arrow" onclick="scrollCarousel(this, 'previous');"></span>
+                    <span class="clickable-icon icon-right-arrow" onclick="scrollCarousel(this, 'next');"></span>
+                    <div id="carousel" class="carousel">
+                        <img src="./assets/img/farming-spirits/screenshot1.png"></img>
+                        <img src="./assets/img/farming-spirits/screenshot2.png"></img>
+                        <img src="./assets/img/farming-spirits/screenshot3.png"></img>
+                        <img src="./assets/img/farming-spirits/screenshot4.png"></img>
+                        <img src="./assets/img/farming-spirits/screenshot5.png"></img>
+                    </div>
+                </div>
+                <div class="line-divider"></div>
+                <h2>My contributions</h2>
+                <p>I worked on this project primarily as a programmer, but I also contributed to the game 
+                    design alongside a classmate. Among the tasks I worked on, the most important were:
+                </p>
+                <ul>
+                    <li><span class="highlight">Entity manager:</span> Developed the entity manager to handle the creation, update and destruction of the player, enemies and attacks.</li>
+                    <li><span class="highlight">Collisions:</span> Created a collision system to detect projectile collisions.</li>
+                    <li><span class="highlight">Level system:</span> Designed and developed the level system, which used a custom binary format to define each level. 
+                        This system was responsible for controlling enemy spawns, enemy movement, 
+                        and detecting when the level had ended.</li>
+                    <li><span class="highlight">Levels:</span> Designed and created several levels.</li>
+                </ul>
+            </section>
+            <!-- DICE DUNGEON INFO -->
+            <input type="checkbox" class="show-project-checkbox" id="project-dice-dungeon">
+            <section class="project-info">
+                <h1 class="section-title">Dice Dungeon</h1>
+                <div class="project-info-summary">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hx0ZQvsqSyA?si=2j__gVMXsPLiEPQN" title="Dice Dungeon Gameplay" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div>
+                        <div>
+                            <span>Role:</span>
+                            <span>Solo Developer</span>
+                        </div>
+                        <div>
+                            <span>Tecnologies:</span>
+                            <span>C#, MonoGame</span>
+                        </div>
+                        <div>
+                            <span>Duration:</span>
+                            <span>3-4 Months</span>
+                        </div>
+                        <div>
+                            <span>Team size:</span>
+                            <span>1</span>
+                        </div>
+                        <div>
+                            <span>Source code:</span>
+                            <span><a href="https://github.com/Sirooy/TFG" target="_blank">GitHub</a></span>
+                        </div>
+                    </div>
+                </div>
+                <span class="tag-list">
+                    <span class="tag">C#</span>
+                    <span class="tag">MonoGame</span>
+                    <span class="tag">ECS</span>
+                    <span class="tag">Solo Project</span>
+                </span>
+                <div class="line-divider"></div>
+                <h2>What is Dice Dungeon?</h2>
+                <p>Dice Dungeon is a small and simple turn-based strategy game where the player has to roll 
+                   dice to perform actions and defeat enemies in order to complete levels. I created 
+                   this game for my final degree project using <span class="highlight">C#</span> and the <a href="https://monogame.net/" target="_blank">MonoGame</a> framework. 
+                   I made this project in order to explore several topics in game development that 
+                   I was interested in, so more than a game, it can be considered a <span class="highlight">technical demo.</span></p>
+                <div class="line-divider"></div>
+                <div class="carousel-container">
+                    <span class="clickable-icon icon-left-arrow" onclick="scrollCarousel(this, 'previous');"></span>
+                    <span class="clickable-icon icon-right-arrow" onclick="scrollCarousel(this, 'next');"></span>
+                    <div id="carousel" class="carousel">
+                        <img src="./assets/img/dice-dungeon/screenshot1.png"></img>
+                        <img src="./assets/img/dice-dungeon/screenshot2.png"></img>
+                        <img src="./assets/img/dice-dungeon/screenshot3.png"></img>
+                        <img src="./assets/img/dice-dungeon/screenshot4.png"></img>
+                        <img src="./assets/img/dice-dungeon/screenshot5.png"></img>
+                        <img src="./assets/img/dice-dungeon/screenshot6.png"></img>
+                    </div>
+                </div>
+                <div class="line-divider"></div>
+                <h2>Technical Achievements</h2>
+                <p>Among the topics I wanted to research, the most notable implementations include:</p>
+                <ul>
+                    <li><span class="highlight">Entity manager:</span> An entity system based on 
+                        the ECS architecture. I had previously implemented an ECS, but it didn't 
+                        allow attaching multiple components of the same type to a single entity, 
+                        so I implemented a more flexible version that supported this feature.</li>
+                    <li><span class="highlight">UI:</span> A basic and responsive UI System built around constraints.</li>
+                    <li><span class="highlight">AI:</span> A few AI related algorithms, including pathfinding, path-following 
+                        and some modular decision trees.</li>
+                    <li><span class="highlight">Physics:</span> A simple but functional physics system 
+                        using the ECS previously mentioned.</li>
+                </ul>
+                <div class="line-divider"></div>
+                <h2>Physics Example</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2UwQRm3aioI?si=76_I6fat4-V0Ss_g" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+            <!-- HELL HUNTER INFO -->
+            <input type="checkbox" class="show-project-checkbox" id="project-hell-hunter">
+            <section class="project-info">
+                <h1 class="section-title">Hell Hunter</h1>
+                <div class="project-info-summary">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ai4mMQx5QII?si=fgdA9hZkXDUH83GY" title="Hell Hunter Gameplay" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div>
+                        <div>
+                            <span>Role:</span>
+                            <span>Lead programmer, Designer</span>
+                        </div>
+                        <div>
+                            <span>Tecnologies:</span>
+                            <span>C++, OpenGL</span>
+                        </div>
+                        <div>
+                            <span>Duration:</span>
+                            <span>5-6 Months</span>
+                        </div>
+                        <div>
+                            <span>Team size:</span>
+                            <span>3</span>
+                        </div>
+                        <div>
+                            <span>Source code:</span>
+                            <span><a href="https://github.com/Sirooy/hellhunter-copy" target="_blank">GitHub</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tag-list">
+                    <span class="tag">C++</span>
+                    <span class="tag">OpenGL</span>
+                    <span class="tag">ECS</span>
+                    <span class="tag">Graphics</span>
+                    <span class="tag">Team Project</span>
+                </div>
+                <div class="line-divider"></div>
+                <h2>What is Hell Hunter?</h2>
+                <p>Hell Hunter is a fast-paced <span class="highlight">first-person shooter</span> where your main goal is to survive as 
+                   long as possible and achieve the highest score, all while your health continuously decreases. 
+                   In order to survive, you must constantly kill demons to recover some health. This game was 
+                   made from scratch using <span class="highlight">C++</span>, <span class="highlight">OpenGL</span>, 
+                   and several libraries as part of a university project.</p>
+                <div class="line-divider"></div>
+                <div class="carousel-container">
+                    <span class="clickable-icon icon-left-arrow" onclick="scrollCarousel(this, 'previous');"></span>
+                    <span class="clickable-icon icon-right-arrow" onclick="scrollCarousel(this, 'next');"></span>
+                    <div id="carousel" class="carousel">
+                        <img src="./assets/img/hell-hunter/screenshot1.png"></img>
+                        <img src="./assets/img/hell-hunter/screenshot2.png"></img>
+                        <img src="./assets/img/hell-hunter/screenshot3.png"></img>
+                        <img src="./assets/img/hell-hunter/screenshot4.png"></img>
+                        <img src="./assets/img/hell-hunter/screenshot5.png"></img>
+                        <img src="./assets/img/hell-hunter/screenshot6.png"></img>
+                        <img src="./assets/img/hell-hunter/screenshot7.png"></img>
+                    </div>
+                </div>
+                <div class="line-divider"></div>
+                <h2>My contributions</h2>
+                <p>I was greatly involved in the design of the game but my main role was as the 
+                   lead programmer. Among the things I implemented for the game, the most remarkable were:</p>
+                <ul>
+                    <li><span class="highlight">Graphics:</span> I developed the entire graphics engine, 
+                        featuring a 3D tiled-deferred renderer with compute shader lightmap calculation, 
+                        supporting up to 2048 active small lights. The engine also included skinned meshes 
+                        with animations, a basic material system, a scene graph for object hierarchies with 
+                        static spatial partitioning, and particle systems with three emitter types. I also 
+                        implemented several rendering techniques such as cascaded shadow mapping, normal and 
+                        parallax mapping, skyboxes, SSAO, and a bloom post-processing effect. Additionally, I developed a 
+                        2D sprite batcher for rendering sprites and text, as well as a simple UI system.</li>
+                    <li><span class="highlight">Entity manager:</span> Designed and developed a template-based entity system built on the ECS architecture.</li>
+                    <li><span class="highlight">Screens and menus:</span> Designed and programmed all in-game screens.</li>
+                    <li><span class="highlight">Gameplay loop:</span> Programmed the core gameplay loop, including the enemy spawn system, 
+                        player controls and mechanics, power-ups and camera movement.</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer class="header footer">
+        <div class="socials-div">
+            <a class="clickable-icon icon-linkedin" href="https://www.linkedin.com/in/victor-t-59761a339" target="_blank">
+            </a>
+            <a class="clickable-icon icon-github" href="https://github.com/Sirooy" target="_blank">
+            </a>
+            <a class="clickable-icon icon-mail" href="mailto:victortob8@gmail.com">
+            </a>
+        </div>
+    </footer>
+
+    <a id="scroll-up-button" class="scroll-up-button clickable-icon icon-scroll-up" 
+        href="#header"></a>
 </body>
 </html>
